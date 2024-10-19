@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const BE_API = `https://amma-unavagam-7b7d19e4ba62.herokuapp.com/`;
+const BE_API = `https://amma-unavagam-bc6a38ca8992.herokuapp.com/`;
 
 export const MenuList = createAsyncThunk(
   "menu/menulist",

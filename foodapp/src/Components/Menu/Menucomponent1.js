@@ -50,7 +50,7 @@ const Menucomponent1 = () => {
     dispatch(addDishes(orderdish));
   };
 
-  const BackendENDPOINT = "https://amma-unavagam-7b7d19e4ba62.herokuapp.com";
+  const BackendENDPOINT = "https://amma-unavagam-bc6a38ca8992.herokuapp.com";
 
   return (
     <div className="w-full h-full">

@@ -32,7 +32,7 @@ const Ordercontent2 = () => {
     dispatch(finalPrice(totalPrice));
   }, [dishes, dispatch]);
 
-  const backendENDPOINT = `https://amma-unavagam-7b7d19e4ba62.herokuapp.com`;
+  const backendENDPOINT = `https://amma-unavagam-bc6a38ca8992.herokuapp.com`;
 
   return (
     <div className="">
