@@ -1,15 +1,17 @@
 import React from "react";
-import "../Home/Homecontent4.css";
 
 const Homecontent4 = () => {
   return (
-    <div className="content4-maindiv">
-      <h1 className="content4-heading1">
+    <div className=" font-cursive text-center p-5">
+      <h1 className="">
         Are you Trying to Book a Table - We are Here To Help You Please Book
         Your Tables and Enjoy.....!!!!
       </h1>
-      <div className="content4-button1div">
-        <button className="content4-button1" type="button">
+      <div className="">
+        <button
+          className="text-black text-3xl rounded-lg px-6 mt-2 text-center lg:mt-4"
+          type="button"
+        >
           →
         </button>
       </div>

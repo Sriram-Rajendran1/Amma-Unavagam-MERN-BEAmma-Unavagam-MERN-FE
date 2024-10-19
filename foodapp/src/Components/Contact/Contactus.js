@@ -1,39 +1,43 @@
 import React from "react";
-import "../Contact/Contactus.css";
+// import "../Contact/Contactus.css";
 
 const Contactus = () => {
   return (
-    <div className="content5-maindiv">
-      <div className="content5-titlediv">Looking to Contact Us</div>
-      <div className="content5-form">
-        <form className="form-maindiv">
-          <div className="form-div1">
-            <div className="divname">
-              <label className="label" for="name">
+    <div className="font-cursive">
+      <div className="bg-black p-5 text-white text-center rounded-lg">
+        Looking to Contact Us
+      </div>
+      <div className="">
+        <form className="w-full h-screen mt-5 md:flex md:h-full">
+          <div className="p-5 md:w-1/2">
+            <div className="w-full flex">
+              <label className="w-3/12 m-auto text-center" for="name">
                 Name :
               </label>
-              <input className="input" />
+              <input className="w-9/12 h-12 border border-black rounded-lg" />
             </div>
-            <div className="divname">
-              <label className="label" for="name">
+            <div className="w-full flex mt-3">
+              <label className="w-3/12 m-auto text-center" for="name">
                 Phone :
               </label>
-              <input className="input" />
+              <input className="w-9/12 h-12 border border-black rounded-lg" />
             </div>
-            <div className="divname">
-              <label className="label" for="name">
+            <div className="w-full flex mt-3">
+              <label className="w-3/12 m-auto text-center" for="name">
                 E-mail :
               </label>
-              <input className="input" />
+              <input className="w-9/12 h-12 border border-black rounded-lg" />
             </div>
           </div>
-          <div className="form-div2">
-            <div className="divname">
-              <label className="label">Leave your Message : </label>
-              <textarea className="input1" />
+          <div className=" p-5 md:w-1/2">
+            <div className="w-full">
+              <label className="w-1/2 m-auto text-center">
+                Leave your Message :
+              </label>
+              <textarea className="mt-2 w-full h-20 border border-black rounded-lg" />
             </div>
-            <div className="submit-contactdiv">
-              <button className="submit-contact" type="submit">
+            <div className=" bg-black text-white w-20 p-2 text-center rounded-md m-auto mt-2">
+              <button className="" type="submit">
                 Submit
               </button>
             </div>

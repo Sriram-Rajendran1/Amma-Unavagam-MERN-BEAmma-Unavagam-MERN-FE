@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "../../Pages/AuthPage/Signuppage.css";
 import { signupUser } from "../../features/AuthSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -13,7 +12,7 @@ const Signuppage = () => {
   );
 
   const [showmessage, setShowMessage] = useState(false);
-  // const [redirect, setRedirect] = useState(false);
+
   const location = useLocation();
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -68,13 +67,13 @@ const Signuppage = () => {
   // }
 
   return (
-    <div className="signupmaindiv">
+    <div className=" text-center font-cursive">
       <Header />
-      <div className="signuptitlediv">
-        <h2 className="signuptitle">Amma Unavagam</h2>
+      <div className="">
+        <h2 className="p-5 md:text-2xl font-bold">Amma's Unavagam</h2>
       </div>
-      <div className="signupdiv">
-        <h4 className="signupheading">Signup</h4>
+      <div className="">
+        <h4 className="">Signup</h4>
       </div>
       {showmessage && (
         <>
@@ -85,9 +84,12 @@ const Signuppage = () => {
           )}
         </>
       )}
-      <form className="form" onSubmit={handleSubmit}>
+      <form
+        className="m-auto w-full md:w-1/2 xl:w-1/3 p-5"
+        onSubmit={handleSubmit}
+      >
         <input
-          className="user-inp"
+          className="m-3 h-10 text-center rounded-lg border border-black"
           type="username"
           name="username"
           value={formData.username}
@@ -95,7 +97,7 @@ const Signuppage = () => {
           onChange={handleinput}
         />
         <input
-          className="email-inp"
+          className="m-3 h-10 text-center rounded-lg border border-black"
           type="email"
           name="email"
           placeholder="Email ID"
@@ -103,7 +105,7 @@ const Signuppage = () => {
           onChange={handleinput}
         />
         <input
-          className="pass-inp"
+          className="m-3 h-10 text-center rounded-lg border border-black"
           type="password"
           name="password"
           placeholder="Password"
@@ -111,19 +113,25 @@ const Signuppage = () => {
           onChange={handleinput}
         />
         <input
-          className="cpass-inp"
+          className="m-3 h-10 text-center rounded-lg border border-black"
           type="password"
           name="confirmpassword"
           placeholder="Confirm-Password"
           value={formData.confirmpassword}
           onChange={handleinput}
         />
-        <div className="aleadydiv" onClick={handlenavtologin}>
-          <h5 className="alreadyheading">
+        <div
+          className="text-sm p-5 font-bold md:text-lg"
+          onClick={handlenavtologin}
+        >
+          <h5 className="">
             Already a Existing User ? Please Click Here to Login
           </h5>
         </div>
-        <button className="signup-button" type="submit">
+        <button
+          className="bg-black text-white px-4 py-2 rounded-lg md:px-10"
+          type="submit"
+        >
           {isLoading ? <p>Signing-Up</p> : <p>Sign Up</p>}
         </button>
       </form>

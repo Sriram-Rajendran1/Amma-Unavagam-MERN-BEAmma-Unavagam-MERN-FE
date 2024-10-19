@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "../AuthPage/Loginpage.css";
 import { useSelector, useDispatch } from "react-redux";
 import { loginUser } from "../../features/AuthSlice";
 import { useNavigate } from "react-router-dom";
@@ -55,13 +54,13 @@ const Loginpage = () => {
   }, [isError, user, dispatch, navigate, location.state]);
 
   return (
-    <div className="loginmaindiv">
+    <div className=" text-center font-cursive">
       <Header />
-      <div className="logintitlediv">
-        <h2 className="logintitle">Amma Unavagam</h2>
+      <div className="">
+        <h2 className="p-5 md:text-2xl font-bold">Amma's Unavagam</h2>
       </div>
-      <div className="logindiv">
-        <h4 className="loginheading">Login</h4>
+      <div className="">
+        <h4 className="">Login</h4>
       </div>
       {showmessage && (
         <>
@@ -72,9 +71,12 @@ const Loginpage = () => {
           )}
         </>
       )}
-      <form className="loginform" onSubmit={handleloginsubmit}>
+      <form
+        className="m-auto w-full md:w-1/2 xl:w-1/3 p-5"
+        onSubmit={handleloginsubmit}
+      >
         <input
-          className="loginuser-inp"
+          className="m-3 h-10 text-center rounded-lg border border-black"
           type="username"
           name="username"
           placeholder="Username"
@@ -82,7 +84,7 @@ const Loginpage = () => {
           onChange={handleinp}
         />
         <input
-          className="loginemail-inp"
+          className="m-3 h-10 text-center rounded-lg border border-black"
           type="email"
           name="email"
           placeholder="Email ID"
@@ -90,16 +92,21 @@ const Loginpage = () => {
           onChange={handleinp}
         />
         <input
-          className="loginpass-inp"
+          className="m-3 h-10 text-center rounded-lg border border-black"
           type="password"
           name="password"
           placeholder="Password"
           value={userLoginData.password}
           onChange={handleinp}
         />
-        <button className="login-button" type="submit">
-          Login
-        </button>
+        <div>
+          <button
+            className="bg-black text-white px-8 py-2 rounded-lg md:px-10"
+            type="submit"
+          >
+            Login
+          </button>
+        </div>
       </form>
       <Footer />
     </div>

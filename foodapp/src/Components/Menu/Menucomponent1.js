@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "../Menu/Menucomponent1.css";
 import { useSelector, useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { addDishes } from "../../features/OrderSlice";
@@ -54,29 +53,32 @@ const Menucomponent1 = () => {
   const BackendENDPOINT = "https://amma-unavagam-7b7d19e4ba62.herokuapp.com";
 
   return (
-    <div className="menucomp1maindiv">
+    <div className="w-full h-full">
       {isLoading && <p>Loading Your Menu...</p>}
       {isError && <p>{message}</p>}
       {currentMealtype === "Breakfast" && (
-        <div className="menucomp1meal1div">
-          <div className="menucomp1title">
+        <div className="w-full h-auto">
+          <div className="text-center text-2xl font-bold">
             <h2>Breakfast</h2>
           </div>
-          <div className="menucomp1content">
+          <div className="md:flex flex-wrap">
             {breakFastDishes.map((item, index) => (
-              <div className="menucompdiv1" key={index}>
+              <div
+                className=" w-full h-screen text-center p-4 md:w-1/2 md:h-96 md:m-auto lg:w-1/4 lg:m-auto"
+                key={index}
+              >
                 <div
-                  className="imgdiv"
+                  className="w-full h-1/2 bg-cover bg-center rounded-lg m-auto mt-2"
                   style={{
                     backgroundImage: `url(${BackendENDPOINT}${item.image})`,
                   }}
                 ></div>
-                <div className="in-cotdiv">
-                  <div className="dishdiv">{item.dish}</div>
-                  <div className="pricediv">Price : {item.price}</div>
-                  <div className="buttonmaindiv">
+                <div className="p-3">
+                  <div className="p-3">{item.dish}</div>
+                  <div className="p-3">Price : {item.price}</div>
+                  <div className="">
                     <button
-                      className="buttondiv"
+                      className="text-white bg-black rounded-lg p-5 m-auto mt-1 md:p-5"
                       type="button"
                       onClick={() =>
                         handleorder(
@@ -100,25 +102,25 @@ const Menucomponent1 = () => {
       )}
       <hr />
       {currentMealtype === "Lunch" && (
-        <div className="menucomp1meal1div">
-          <div className="menucomp1title">
+        <div className="w-full h-auto">
+          <div className="text-center text-2xl font-bold">
             <h2>Lunch</h2>
           </div>
-          <div className="menucomp1content">
+          <div className="md:flex flex-wrap">
             {lunchDishes.map((item, index) => (
-              <div className="menucompdiv1">
+              <div className=" w-full h-screen text-center p-4 md:w-1/2 md:h-96 md:m-auto lg:w-1/4 lg:m-auto">
                 <div
-                  className="imgdiv"
+                  className="w-full h-1/2 bg-cover bg-center rounded-lg m-auto mt-2"
                   style={{
                     backgroundImage: `url(${BackendENDPOINT}${item.image})`,
                   }}
                 ></div>
-                <div className="in-cotdiv">
-                  <div className="dishdiv">{item.dish}</div>
-                  <div className="pricediv">Price : {item.price}</div>
-                  <div className="buttonmaindiv">
+                <div className="p-3">
+                  <div className="p-3">{item.dish}</div>
+                  <div className="p-3">Price : {item.price}</div>
+                  <div className="">
                     <button
-                      className="buttondiv"
+                      className="text-white bg-black rounded-lg p-5 m-auto mt-1 md:p-5"
                       type="button"
                       onClick={() =>
                         handleorder(
@@ -140,27 +142,26 @@ const Menucomponent1 = () => {
           </div>
         </div>
       )}
-      <hr />
       {currentMealtype === "Dinner" && (
-        <div className="menucomp1meal1div">
-          <div className="menucomp1title">
+        <div className="w-full h-auto">
+          <div className="text-center text-2xl font-bold">
             <h2>Dinner</h2>
           </div>
-          <div className="menucomp1content">
+          <div className="md:flex flex-wrap">
             {dinnerDishes.map((item, index) => (
-              <div className="menucompdiv1">
+              <div className=" w-full h-screen text-center p-4 md:w-1/2 md:h-96 md:m-auto lg:w-1/4 lg:m-auto">
                 <div
-                  className="imgdiv"
+                  className="w-full h-1/2 bg-cover bg-center rounded-lg m-auto mt-2"
                   style={{
                     backgroundImage: `url(${BackendENDPOINT}${item.image})`,
                   }}
                 ></div>
-                <div className="in-cotdiv">
-                  <div className="dishdiv">{item.dish}</div>
-                  <div className="pricediv">Price : {item.price}</div>
-                  <div className="buttonmaindiv">
+                <div className="p-3">
+                  <div className="p-3">{item.dish}</div>
+                  <div className="p-3">Price : {item.price}</div>
+                  <div className="">
                     <button
-                      className="buttondiv"
+                      className="text-white bg-black rounded-lg p-5 m-auto mt-1 md:p-5"
                       type="button"
                       onClick={() =>
                         handleorder(
@@ -183,27 +184,30 @@ const Menucomponent1 = () => {
         </div>
       )}
       {currentMealtype === "all" && (
-        <div>
-          <div className="menucomp1meal1div">
-            <div className="menucomp1title">
+        <>
+          <div className=" w-full h-auto">
+            <div className="text-center text-2xl font-bold">
               <h2>Breakfast</h2>
             </div>
-            <div className="menucomp1content">
+            <div className="md:flex flex-wrap">
               {breakFastDishes.map((item, index) => (
-                <div className="menucompdiv1" key={index}>
+                <div
+                  className=" w-full h-screen text-center p-4 md:w-1/2 md:h-96 md:m-auto lg:w-1/4 lg:m-auto"
+                  key={index}
+                >
                   <div
-                    className="imgdiv"
+                    className="w-full h-1/2 bg-cover bg-center rounded-lg m-auto mt-2"
                     style={{
                       backgroundImage: `url(${BackendENDPOINT}${item.image})`,
                     }}
                   ></div>
-                  <div className="in-cotdiv">
-                    <div className="dishdiv">{item.dish}</div>
-                    <div className="pricediv">Price : {item.price}</div>
-                    <div className="buttonmaindiv">
+                  <div className="p-3">
+                    <div className="p-3">{item.dish}</div>
+                    <div className="p-3">Price : {item.price}</div>
+                    <div className="">
                       <button
                         key={item.index}
-                        className="buttondiv"
+                        className="text-white bg-black rounded-lg p-5 m-auto mt-1 md:p-5"
                         type="button"
                         onClick={() =>
                           handleorder(
@@ -225,25 +229,28 @@ const Menucomponent1 = () => {
             </div>
           </div>
           <hr />
-          <div className="menucomp1meal1div">
-            <div className="menucomp1title">
+          <div className="w-full h-auto">
+            <div className="text-center text-2xl font-bold">
               <h2>Lunch</h2>
             </div>
-            <div className="menucomp1content">
+            <div className="md:flex flex-wrap">
               {lunchDishes.map((item, index) => (
-                <div className="menucompdiv1" key={index}>
+                <div
+                  className=" w-full h-screen text-center p-4 md:w-1/2 md:h-96 md:m-auto lg:w-1/4 lg:m-auto"
+                  key={index}
+                >
                   <div
-                    className="imgdiv"
+                    className="w-full h-1/2 bg-cover bg-center rounded-lg m-auto mt-2"
                     style={{
                       backgroundImage: `url(${BackendENDPOINT}${item.image})`,
                     }}
                   ></div>
-                  <div className="in-cotdiv">
-                    <div className="dishdiv">{item.dish}</div>
-                    <div className="pricediv">Price : {item.price}</div>
-                    <div className="buttonmaindiv">
+                  <div className="p-3">
+                    <div className="p-3">{item.dish}</div>
+                    <div className="p-3">Price : {item.price}</div>
+                    <div className="">
                       <button
-                        className="buttondiv"
+                        className="text-white bg-black rounded-lg p-5 m-auto mt-1 md:p-5"
                         type="button"
                         onClick={() =>
                           handleorder(
@@ -265,25 +272,28 @@ const Menucomponent1 = () => {
             </div>
           </div>
           <hr />
-          <div className="menucomp1meal1div">
-            <div className="menucomp1title">
+          <div className="w-full h-auto">
+            <div className="text-center text-2xl font-bold">
               <h2>Dinner</h2>
             </div>
-            <div className="menucomp1content">
+            <div className="md:flex flex-wrap">
               {dinnerDishes.map((item, index) => (
-                <div className="menucompdiv1" key={index}>
+                <div
+                  className=" w-full h-screen text-center p-4 md:w-1/2 md:h-96 md:m-auto lg:w-1/4 lg:m-auto"
+                  key={index}
+                >
                   <div
-                    className="imgdiv"
+                    className="w-full h-1/2 bg-cover bg-center rounded-lg m-auto mt-2"
                     style={{
                       backgroundImage: `url(${BackendENDPOINT}${item.image})`,
                     }}
                   ></div>
-                  <div className="in-cotdiv">
-                    <div className="dishdiv">{item.dish}</div>
-                    <div className="pricediv">Price : {item.price}</div>
-                    <div className="buttonmaindiv">
+                  <div className="p-3">
+                    <div className="p-3">{item.dish}</div>
+                    <div className="p-3">Price : {item.price}</div>
+                    <div className="">
                       <button
-                        className="buttondiv"
+                        className="text-white bg-black rounded-lg p-5 m-auto mt-1 md:p-5"
                         type="button"
                         onClick={() =>
                           handleorder(
@@ -304,7 +314,7 @@ const Menucomponent1 = () => {
               ))}
             </div>
           </div>
-        </div>
+        </>
       )}
     </div>
   );

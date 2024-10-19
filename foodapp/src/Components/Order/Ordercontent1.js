@@ -1,10 +1,10 @@
 import React from "react";
-import "../Order/Ordercontent1.css";
+// import "../Order/Ordercontent1.css";
 
 const Ordercontent1 = () => {
   return (
-    <div className="ordercont1headmaindiv">
-      <h1 className="orderhead1">Please Find Your Orders Here</h1>
+    <div className="font-cursive text-center p-5 md:text-2xl  md:p-7 lg:text-3xl lg:p-10">
+      <h1>Please Find Your Orders Here</h1>
     </div>
   );
 };

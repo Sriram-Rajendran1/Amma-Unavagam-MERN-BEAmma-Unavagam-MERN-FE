@@ -1,5 +1,4 @@
 import React from "react";
-import "../Homepage/Homepage.css";
 import Header from "../../Components/Header/Header";
 import Homecontent1 from "../../Components/Home/Homecontent1";
 import Homecontent2 from "../../Components/Home/Homecontent2";
@@ -13,20 +12,20 @@ const Homepage = () => {
     <div>
       <Header />
       <Homecontent1 />
-      <div className="content1-div1"></div>
-      <div className="content1-div1"></div>
+      <div className="bg-gray-500 w-full h-1 my-2 md:my-4"></div>
+      <div className="bg-gray-500 w-full h-1 my-2 md:my-4"></div>
       <Homecontent2 />
-      <div className="content1-div1"></div>
-      <div className="content1-div1"></div>
+      <div className="bg-gray-500 w-full h-1 my-2 md:my-4"></div>
+      <div className="bg-gray-500 w-full h-1 my-2 md:my-4"></div>
       <Homecontent3 />
-      <div className="content1-div1"></div>
-      <div className="content1-div1"></div>
+      <div className="bg-gray-500 w-full h-1 my-2 md:my-4"></div>
+      <div className="bg-gray-500 w-full h-1 my-2 md:my-4"></div>
       <Homecontent4 />
-      <div className="content1-div1"></div>
-      <div className="content1-div1"></div>
+      <div className="bg-gray-500 w-full h-1 my-2 md:my-4"></div>
+      <div className="bg-gray-500 w-full h-1 my-2 md:my-4"></div>
       <Contactus />
-      <div className="content1-div1"></div>
-      <div className="content1-div1"></div>
+      <div className="bg-gray-500 w-full h-1 my-2 md:my-4"></div>
+      <div className="bg-gray-500 w-full h-1 my-2 md:my-4"></div>
       <Footer />
     </div>
   );

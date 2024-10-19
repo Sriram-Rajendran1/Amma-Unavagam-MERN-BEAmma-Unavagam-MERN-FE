@@ -1,12 +1,9 @@
 import React from "react";
-import "../Footer/Footer.css";
 
 const Footer = () => {
   return (
-    <div className="footerdivmain">
-      <h1 className="footerh1">
-        Come and Visit Us Again, You are always Welcome...
-      </h1>
+    <div className="bg-black text-white text-center font-cursive p-2 md:p-5 lg:text-2xl">
+      <h1>Come and Visit Us Again, You are always Welcome...</h1>
     </div>
   );
 };

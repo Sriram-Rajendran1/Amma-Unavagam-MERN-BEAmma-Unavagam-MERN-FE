@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "../Order/Ordercontent2.css";
 import { useSelector, useDispatch } from "react-redux";
 import {
   decrementQuantity,
@@ -36,50 +35,59 @@ const Ordercontent2 = () => {
   const backendENDPOINT = `https://amma-unavagam-7b7d19e4ba62.herokuapp.com`;
 
   return (
-    <div className="ordercontent2-maindiv">
-      <div className="ordercontent2-headdivmain">
-        <div className="ordered-items-div">Ordered Items</div>
-        <div className="quantity-div">Quantity</div>
-        <div className="price-div">Price of Item</div>
-        <div className="price-with-quantity-div">Price with Quantity</div>
+    <div className="">
+      <div className="hidden md:flex bg-black text-white font-cursive justify-evenly p-6">
+        <div className="">Ordered Items</div>
+        <div className="">Quantity</div>
+        <div className="">Price of Item</div>
+        <div className="">Price with Quantity</div>
       </div>
-      <div className="ordercontent2-contentdivmain">
+      <div className="bg-black text-xs flex justify-evenly py-5 text-white md:hidden font-cursive">
+        <div className="">Dishes</div>
+        <div className="">Quantity</div>
+        <div className="">Price/Item</div>
+        <div className="">Total-Price</div>
+      </div>
+      <div className="font-cursive text-center">
         {!dishes || dishes.length <= 0 ? (
-          <div className="norder">
+          <div className="m-5">
             <h3>No Dishes has been selected to place an Order</h3>
           </div>
         ) : (
           dishes.map((dish, index) => (
-            <div className="ordercontent2-listdivmain" key={index}>
-              <div className="sn-items-div">
-                <div className="sno-div">{index + 1}.</div>
+            <div
+              className="flex justify-evenly text-xs p-3 md:text-lg md:py-5"
+              key={index}
+            >
+              <div className="flex justify-evenly items-center mt-2">
+                <div className="">{index + 1}.</div>
                 <div
-                  className="orderimg"
+                  className="h-12 w-12 bg-cover bg-center rounded-lg ml-1"
                   style={{
                     backgroundImage: `url(${backendENDPOINT}${dish.image})`,
                   }}
                 ></div>
-                <div className="item-div">{dish.dish}</div>
+                <div className="m-1">{dish.dish}</div>
               </div>
-              <div className="quantites-div">
+              <div className="flex justify-evenly items-center">
                 <button
                   type="button"
-                  className="quantitybuttons"
+                  className="p-3 text-xl"
                   onClick={() => handleIncrement(dish.id)}
                 >
                   +
                 </button>
-                <div className="quantites-div-final">{dish.quantity}</div>
+                <div className="">{dish.quantity}</div>
                 <button
                   type="button"
-                  className="quantitybuttons"
+                  className="p-3 text-xl"
                   onClick={() => handleDecrement(dish.id)}
                 >
                   -
                 </button>
               </div>
-              <div className="price-contentdiv">{dish.price}</div>
-              <div className="pricewithquantity-contentdiv">
+              <div className="my-auto">{dish.price}</div>
+              <div className="my-auto">
                 {dish.price}*{dish.quantity} = {dish.price * dish.quantity}
               </div>
             </div>
@@ -90,16 +98,12 @@ const Ordercontent2 = () => {
           <div></div>
         ) : (
           <>
-            <div className="totalpricediv">
-              <span className="span1">Total Price : </span>
-              <span className="span2">{finalprice}</span>
+            <div className="text-center px-6 text-xs p-5 md:text-lg">
+              <span className="">Total Price : </span>
+              <span className="">{finalprice}</span>
             </div>
-            <div className="proceedtocheckoutmaindiv">
-              <button
-                className="proceedtocheckoutbutton"
-                onClick={handleCheckout}
-                type="button"
-              >
+            <div className="bg-black text-white w-3/4 rounded-lg my-4 text-center mx-auto py-3 text-xs md:text-lg md:w-1/2 ">
+              <button className="" onClick={handleCheckout} type="button">
                 Procced to Check-out
               </button>
             </div>

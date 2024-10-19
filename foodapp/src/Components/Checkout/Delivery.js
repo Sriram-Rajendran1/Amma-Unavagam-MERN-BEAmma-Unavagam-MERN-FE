@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../../Components/Checkout/Delivery.css";
 import { deliverydetails, orderDetailsData } from "../../features/OrderSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -53,18 +52,25 @@ const Delivery = () => {
 
   return (
     <div>
-      <div className="dl-headmain">
-        <h2 className="dl-heading1">Delivery Details</h2>
+      <div className="">
+        <h2 className=" font-cursive text-center p-5 font-bold md:text-2xl">
+          Delivery Details
+        </h2>
       </div>
-      {showMessage && <div className="orderplaced">{message}</div>}
+      {showMessage && (
+        <div className="bg-green-600 text-black font-cursive p-3 text-center">
+          {message}
+        </div>
+      )}
       {showform && (
-        <div className="form-dl-divmain">
-          <div className="dl-name">
-            <div className="namediv">
+        <div className="p-3 font-cursive w-full md:w-1/2 m-auto">
+          <div className="flex justify-evenly items-center p-2 w-full ">
+            <div className="w-2/6 text-center">
               <label type="name">Name : </label>
             </div>
-            <div className="inputdiv">
+            <div className=" w-4/6">
               <input
+                className=" w-11/12 h-10 rounded-lg border border-black text-sm p-2"
                 type="text"
                 name="name"
                 onChange={handleDevInp}
@@ -72,12 +78,13 @@ const Delivery = () => {
               />
             </div>
           </div>
-          <div className="dl-phone">
-            <div className="namediv">
+          <div className="flex justify-evenly items-center p-2 w-full">
+            <div className="w-2/6 text-center">
               <label type="name">Phone : </label>
             </div>
-            <div className="inputdiv">
+            <div className="w-4/6">
               <input
+                className=" w-11/12 h-10 rounded-lg border border-black text-sm p-2"
                 type="tel"
                 name="phone"
                 onChange={handleDevInp}
@@ -85,12 +92,13 @@ const Delivery = () => {
               />
             </div>
           </div>
-          <div className="dl-landmark">
-            <div className="namediv">
+          <div className="flex justify-evenly items-center p-2 w-full">
+            <div className="w-2/6 text-center">
               <label type="name">Landmark : </label>
             </div>
-            <div className="inputdiv">
+            <div className="w-4/6">
               <input
+                className=" w-11/12 h-10 rounded-lg border border-black text-sm p-2"
                 type="text"
                 name="landmark"
                 onChange={handleDevInp}
@@ -98,12 +106,13 @@ const Delivery = () => {
               />
             </div>
           </div>
-          <div className="dl-address">
-            <div className="namediv">
+          <div className="flex justify-evenly items-center p-2 w-full">
+            <div className="w-2/6 text-center">
               <label type="name">Address : </label>
             </div>
-            <div className="inputdiv">
+            <div className="w-4/6">
               <input
+                className=" w-11/12 h-10 rounded-lg border border-black text-sm p-2"
                 type="text"
                 name="address"
                 onChange={handleDevInp}
@@ -111,9 +120,9 @@ const Delivery = () => {
               />
             </div>
           </div>
-          <div className="dl-buttondiv">
+          <div className="text-center p-5">
             <button
-              className="dl-btn"
+              className="p-2 rounded-lg text-white"
               type="button"
               disabled={!isFormValid()}
               style={{
