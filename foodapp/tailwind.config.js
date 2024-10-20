@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        cursive: ['"Comic Sans MS"', "cursive"], // You can replace 'Comic Sans MS' with any cursive font.
+        cursive: ['"Merriweather"', "serif"],
       },
       textShadow: {
         sm: "1px 1px 2px black",
